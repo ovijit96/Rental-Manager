@@ -1,65 +1,79 @@
-# Rental-Manager # ভাড়া ম্যানেজার — Dashboard UI (HTML + Tailwind)
+ভাড়া ম্যানেজার — Dashboard UI (HTML + Tailwind + JavaScript)
 
-এটি একটি **ভাড়া ম্যানেজার প্রোটোটাইপ** যা HTML এবং Tailwind CSS ব্যবহার করে বানানো হয়েছে। প্রোজেক্টের উদ্দেশ্য হলো ভাড়াটিয়ার তথ্য, পরিবারের সদস্য, মাসিক ভাড়া হিসাব এবং ইনভয়েস ডাউনলোড সহজভাবে দেখানো।
+এটি একটি ভাড়া ম্যানেজার প্রোটোটাইপ যা HTML, Tailwind CSS এবং JavaScript ব্যবহার করে তৈরি করা হয়েছে। এই প্রোজেক্টের উদ্দেশ্য হলো ভাড়াটিয়ার তথ্য, পরিবারের সদস্য, মাসিক ভাড়া হিসাব, ইতিহাস এবং ইনভয়েস সহজভাবে দেখা ও ম্যানেজ করা।
 
----
+প্রোজেক্ট ফিচারসমূহ (বর্তমান)
 
-## Project Features (বর্তমান)
+Dashboard Layout: Sidebar + Main Content
 
-- **Dashboard Layout**: Sidebar + Main content
-- **Sidebar**:
-  - লোগো এবং প্রোজেক্ট নাম
-  - ভাড়াটিয়ার লিস্ট (ডেমো)
-  - Search Input
-  - Add Tenant Button
-- **Main Content**:
-  - Profile Card (নাম, ফোন, ঠিকানা, মাসিক ভাড়া, স্ট্যাটাস)
-  - Summary Card (এই মাসের প্রাপ্য/প্রদান/বাকি)
-  - Family Members Card (ডেমো সদস্য)
-  - Rent History Table (মাসভিত্তিক হিসাব)
-  - Invoice PDF বাটন (প্লেসহোল্ডার)
+Sidebar:
 
----
+লোগো এবং প্রোজেক্ট নাম
 
-## Tech Stack
+ভাড়াটিয়ার লিস্ট (ডেমো ডেটা)
 
-- HTML5
-- Tailwind CSS (CDN)
-- Responsive Layout (Mobile + Desktop)
+সার্চ ইনপুট
 
----
+নতুন ভাড়াটিয়া যোগ করার বাটন
 
-## How to Run
+Main Content:
 
-1. এই রিপোজিটরি ক্লোন করুন:
-```bash
+প্রোফাইল কার্ড (নাম, ফোন, ঠিকানা, মাসিক ভাড়া, স্ট্যাটাস)
+
+সামারি কার্ড (এই মাসের প্রাপ্য / প্রদান / বাকি)
+
+পরিবারের সদস্য কার্ড (ডেমো সদস্য)
+
+ভাড়া হিসাবের টেবিল (মাসভিত্তিক)
+
+ইনভয়েস PDF বাটন (প্লেসহোল্ডার)
+
+JavaScript যুক্ত ফিচারসমূহ:
+
+ডায়নামিক সামারি আপডেট
+
+ভাড়া হিসাব যোগ/বিয়োগ (plus/minus বাটন)
+
+ভাড়াটিয়ার তথ্য এডিট/ডিলিট অপশন (বেসিক)
+
+লোকাল স্টোরেজ ডেটা সেভ
+
+ব্যবহৃত টেকনোলজি
+
+HTML5
+
+Tailwind CSS (CDN)
+
+JavaScript (Vanilla)
+
+Responsive Layout (Mobile + Desktop)
+
+রান করার নিয়ম
+
+রিপোজিটরি ক্লোন করুন:
+
 git clone <your-repo-url>
-```
-2. `index.html` ফাইলটি ব্রাউজারে খুলুন।
-3. Tailwind CDN ব্যবহার করা হয়েছে, কোনো আলাদা বিল্ড প্রক্রিয়া লাগবে না।
 
----
 
-## Future Features / Roadmap
+index.html ফাইলটি সরাসরি ব্রাউজারে ওপেন করুন।
 
-| Feature | Status | Description |
-|---------|--------|-------------|
-| Add/Edit Tenant | Pending | নতুন ভাড়াটিয়া যোগ করা এবং সম্পাদনা করা |
-| Local Storage | Pending | ভাড়াটিয়ার ডেটা লোকাল ব্রাউজারে সেভ করা |
-| Invoice PDF | Pending | ভাড়া হিসাব PDF আকারে ডাউনলোড করা |
-| Family Member Management | Pending | পরিবারের সদস্যদের যোগ/এডিট/ডিলিট করা |
-| Monthly Rent Auto-Update | Pending | নতুন মাসে স্বয়ংক্রিয়ভাবে ভাড়া এন্ট্রি তৈরি |
-| Payment Tracking | Pending | দেওয়া ভাড়া এবং বাকি হিসাব ট্র্যাক করা |
-| Multi-Tenant Dashboard | Pending | একাধিক ভাড়াটিয়ার তথ্য একসাথে দেখা |
+Tailwind CDN ও JavaScript ব্যবহার করা হয়েছে, তাই কোনো আলাদা build প্রক্রিয়া লাগবে না।
 
----
+ভবিষ্যৎ ফিচারসমূহ / রোডম্যাপ
+ফিচার	স্ট্যাটাস	বিবরণ
+Add/Edit Tenant	Pending	নতুন ভাড়াটিয়া যোগ করা ও তথ্য সম্পাদনা
+Local Storage উন্নয়ন	Ongoing	ডেটা ব্রাউজারে সেভ ও লোড করা
+Invoice PDF	Pending	ভাড়া হিসাব PDF আকারে ডাউনলোড
+Family Member Management	Pending	পরিবারের সদস্যদের যোগ/এডিট/ডিলিট
+Monthly Rent Auto-Update	Pending	নতুন মাসে স্বয়ংক্রিয়ভাবে ভাড়া এন্ট্রি
+Payment Tracking	Pending	প্রদানকৃত ও বাকি টাকার হিসাব ট্র্যাক
+Multi-Tenant Dashboard	Pending	একাধিক ভাড়াটিয়ার ডেটা একসাথে ম্যানেজ
+নোট
 
-## Notes
+এই প্রোজেক্টটি বর্তমানে শুধুমাত্র Frontend ভিত্তিক।
 
-- এই প্রোটোটাইপ শুধুমাত্র **Frontend Layout**; কোনো Backend বা Payment System নেই।
-- Tailwind CDN ব্যবহার করা হয়েছে, তাই কোনো build tools প্রয়োজন নেই।
-- ভবিষ্যতে এই প্রোজেক্টে JS বা LocalStorage ফিচার যুক্ত করা হবে।
+Backend বা Payment System এখনো যুক্ত করা হয়নি।
 
----
+ভবিষ্যতে JavaScript এর মাধ্যমে আরও ইন্টার‌্যাকটিভ ফিচার (যেমন Local Storage, API Integration ইত্যাদি) যোগ করা হবে।
 
 © ২০২৫ ভাড়া ম্যানেজার — Dashboard UI Prototype
