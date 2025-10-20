@@ -1,0 +1,164 @@
+/* ===== Rental Manager Modern Theme ===== */
+:root{
+  --bg: #f3f4f6;          /* light gray background */
+  --panel: #ffffff;       /* white panels */
+  --border: #d1d5db;      /* light gray border */
+  --text: #111827;        /* dark text */
+  --muted: #6b7280;       /* muted text */
+  --brand: #0ea5e9;       /* sky blue accent */
+  --brand-dark: #0369a1;
+  --success: #16a34a;
+  --danger: #dc2626;
+  --warn: #f59e0b;
+  --radius: 12px;
+  --shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+html, body, #root { height: 100%; margin: 0; }
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Header */
+.app-header {
+  background: var(--brand);
+  color: white;
+  padding: 14px 0;
+  box-shadow: var(--shadow);
+}
+.app-header .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+}
+.app-header h1 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 20px;
+}
+.nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: var(--radius);
+  transition: background 0.2s;
+}
+.nav a:hover {
+  background: var(--brand-dark);
+}
+
+/* Container & Panels */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+
+/* Buttons */
+button, .btn {
+  background: var(--brand);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  padding: 10px 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+button:hover, .btn:hover {
+  background: var(--brand-dark);
+}
+.btn-secondary {
+  background: var(--muted);
+}
+.btn-danger {
+  background: var(--danger);
+}
+
+/* Inputs */
+input, select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+input:focus, select:focus {
+  border-color: var(--brand);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(14,165,233,0.2);
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+.stat-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-align: center;
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+.stat-card h3 {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 500;
+}
+.stat-card p {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 6px 0 0;
+  color: var(--brand-dark);
+}
+
+/* Lists / Rows */
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px 14px;
+  margin-bottom: 8px;
+  box-shadow: var(--shadow);
+}
+.row .status-due { color: var(--warn); }
+.row .status-adv { color: var(--success); }
+
+/* Footer */
+.app-footer {
+  text-align: center;
+  padding: 24px 0;
+  color: var(--muted);
+  font-size: 14px;
+  border-top: 1px solid var(--border);
+  margin-top: 40px;
+}
+
+/* Avatar */
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius);
+  object-fit: cover;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
