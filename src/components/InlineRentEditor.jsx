@@ -1,10 +1,42 @@
 import React, { useState } from 'react'
-export default function InlineRentEditor({ rent, onSave }){
-const [v, setV] = useState(rent)
-return (
-<form onSubmit={(e)=>{ e.preventDefault(); onSave?.(Number(v||0)) }} className="flex items-center gap-2">
-<input type="number" value={v} onChange={e=>setV(e.target.value)} className="px-3 py-2 rounded-xl bg-white/10 border border-white/15 outline-none w-28"/>
-<button className="px-3 py-2 rounded-xl bg-white/10 hover:bg-white/20" type="submit">Save</button>
-</form>
-)
+
+/**
+ * Edit monthly rent with an "effective from (month)" field.
+ * onSave gets { amount, effectiveFrom }
+ */
+export default function InlineRentEditor({ rent, onSave }) {
+  const [amount, setAmount] = useState(rent || '')
+  const [effectiveFrom, setEffectiveFrom] = useState('')
+
+  function submit(e) {
+    e.preventDefault()
+    const a = Number(amount || 0)
+    if (!a || !effectiveFrom) {
+      alert('Please enter amount and effective month.')
+      return
+    }
+    onSave?.({ amount: a, effectiveFrom })  // e.g. "2025-02"
+    setEffectiveFrom('')
+    // keep amount filled (often more edits happen in same session)
+    alert('✅ Rent change saved (with effective month).')
+  }
+
+  return (
+    <form onSubmit={submit} className="inline-form" style={{ display:'flex', gap:8, alignItems:'center', flexWrap:'wrap' }}>
+      <input
+        type="number"
+        placeholder="New rent (BDT)"
+        value={amount}
+        onChange={e=>setAmount(e.target.value)}
+        style={{ width:130 }}
+      />
+      <input
+        type="month"
+        title="Effective from month"
+        value={effectiveFrom}
+        onChange={e=>setEffectiveFrom(e.target.value)}
+      />
+      <button className="btn" type="submit">Save</button>
+    </form>
+  )
 }

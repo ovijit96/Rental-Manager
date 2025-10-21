@@ -61,10 +61,20 @@ body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial;color:var(--text);backgro
 @media (max-width: 980px){ .layout{grid-template-columns: 1fr} .sidebar{position:static; height:auto} }
 
 /* ========== Sidebar ========== */
-.sidebar{background:#1e1b4b;color:#eaeaff;border-radius:18px; padding:14px; position:sticky; top:84px; height: calc(100vh - 110px); overflow:auto}
+.sidebar {
+  background: #1e1b4b;
+  padding: 20px;
+  color: white;
+  border-radius: 20px 0 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px; 
+}
 .sidebar h3{margin:6px 0 12px; font-size:16px}
-.sidebar .search{width:100%; padding:10px 12px; border-radius:12px; border:none; outline:none; background:#2a2666; color:#fff}
-.sidebar .add-btn{width:100%; margin:12px 0; background:#22c55e; color:#072b12; border:none; border-radius:12px; padding:10px 12px; font-weight:700; cursor:pointer}
+.sidebar .search{width:100%; 
+  margin-bottom: 18px;
+  padding:10px 12px; border-radius:12px; border:none; outline:none; background:#2a2666; color:#fff}
+.sidebar .add-btn{width:100%; margin-bottom:12px 0; background:#22c55e; color:#072b12; border:none; border-radius:12px; padding:10px 12px; font-weight:700; cursor:pointer}
 .tenant-list{display:grid; gap:10px; margin-top:8px}
 .t-item{display:flex; justify-content:space-between; align-items:center; padding:10px 12px; border-radius:12px; background:#2a2666; cursor:pointer; text-decoration:none; color:#fff}
 .t-item:hover{background:#312b75}
